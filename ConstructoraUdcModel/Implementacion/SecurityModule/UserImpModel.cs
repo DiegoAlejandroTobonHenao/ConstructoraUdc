@@ -35,7 +35,7 @@ namespace ConstructoraUdcModel.Implementacion.SecurityModule
 
                     return 1;
                 }
-                catch ()
+                catch 
                 {
                     return 2;
 
