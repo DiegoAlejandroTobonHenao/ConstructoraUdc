@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 
 namespace ConstructoraUdcModel.Implementacion.SecurityModule
 {
-    public class RoleImpModel
+    public class UserImpModel
     {
 
         
-        public int RecordCreation(RoleDbModel dbModel)
+        public int RecordCreation(UserDbModel dbModel)
         {
             ///<summary>
-            ///Se agrega un registro a roles
+            ///Se agrega un registro a Users
             ///</summary>
             ///<param name = "DbModel">Representa un objeto con la informacion Rol
             ///</param>
@@ -25,20 +25,17 @@ namespace ConstructoraUdcModel.Implementacion.SecurityModule
             {
                 try
                 {
-                  
-                    if(db.SEC_Role.Where(x => x.name.ToUpper().Equals(dbModel.Name.ToUpper())).Count() > 0)
-                    {
-                        return 3;
-                    }
-                    RoleModelMapper mapper = new RoleModelMapper();
-                    SEC_Role record = mapper.MapperT2T1(dbModel);
+                    UserModelMapper mapper = new UserModelMapper();
+                    SEC_User record = mapper.MapperT2T1(dbModel);
 
-                    db.SEC_Role.Add(record);
+                    record.create_date = dbModel.CurrentDate;
+                    record.create_user_id = dbModel.UserInSession;
+                    db.SEC_User.Add(record);
                     db.SaveChanges();
 
                     return 1;
                 }
-                catch()
+                catch ()
                 {
                     return 2;
 
@@ -47,20 +44,34 @@ namespace ConstructoraUdcModel.Implementacion.SecurityModule
             
         }
 
-        public int RecordUpdate(RoleDbModel dbModel)
+        public int RecordUpdate(UserDbModel dbModel)
         {
             using (ConstructoraUdcDBEntities db = new ConstructoraUdcDBEntities())
             {
                 try
                 {
-                    var record = db.SEC_Role.Where(x => x.id == dbModel.Id).FirstOrDefault();
+                    var record = db.SEC_User.Where(x => x.id == dbModel.Id).FirstOrDefault();
                     if (record == null)
                     {
                         return 3;
                     }
-
                     record.name = dbModel.Name;
+                    record.last_name = dbModel.LastName;
+                    record.document = dbModel.Document;
+                    record.phone = dbModel.Phone;
+                    record.email = dbModel.Email;
+                    record.password_user = dbModel.PasswordUser;
+                    record.city_id = dbModel.CityId;
+                    record.update_user_id = dbModel.UserInSession;
+                    record.update_date = dbModel.CurrentDate;
+                    /*
                     record.removed = dbModel.Removed;
+                    record.removed_date = (DateTime)dbModel.RemovedDate;
+                    record.create_date = (DateTime)dbModel.CreateDate;
+                    record.remove_user_id = (int)dbModel.RemovedUserId;
+                    record.create_user_id = (int)dbModel.CreateUserId;
+                    record.update_user_id = (int)dbModel.UpdateUserId;
+                    */
 
                     db.SaveChanges();
                     return 1;
@@ -72,20 +83,22 @@ namespace ConstructoraUdcModel.Implementacion.SecurityModule
             }
         }
 
-        public int RecordRemove(RoleDbModel dbModel)
+        public int RecordRemove(UserDbModel dbModel)
         {
             using (ConstructoraUdcDBEntities db = new ConstructoraUdcDBEntities())
             {
                 try
                 {
-                    var record = db.SEC_Role.Where(x => x.id == dbModel.Id).FirstOrDefault();
+                    var record = db.SEC_User.Where(x => x.id == dbModel.Id).FirstOrDefault();
                     if (record == null)
                     {
                         return 3;
                     }
 
-                    db.SEC_Role.Remove(record);
-
+                    //db.SEC_User.Remove(record);
+                    record.removed = true;
+                    record.removed_date = dbModel.CurrentDate;
+                    record.remove_user_id = dbModel.UserInSession;
                     db.SaveChanges();
                     return 1;
                 }
@@ -96,14 +109,14 @@ namespace ConstructoraUdcModel.Implementacion.SecurityModule
             }
         }
 
-        public IEnumerable<RoleDbModel> RecordList(string filter)
+        public IEnumerable<UserDbModel> RecordList(string filter)
         { 
              using (ConstructoraUdcDBEntities db = new ConstructoraUdcDBEntities())
               {
-                    var listaLinq = from role in db.SEC_Role
-                                    where !role.removed && role.name.ToUpper().Contains(filter.ToUpper())
-                                    select role;
-                    RoleModelMapper mapper = new RoleModelMapper();
+                    var listaLinq = from User in db.SEC_User
+                                    where !User.removed && User.name.ToUpper().Contains(filter.ToUpper())
+                                    select User;
+                    UserModelMapper mapper = new UserModelMapper();
                     var listaFinal = mapper.MapperT1T2(listaLinq);
                     return listaFinal;
               }

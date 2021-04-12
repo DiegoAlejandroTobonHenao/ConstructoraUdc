@@ -36,6 +36,7 @@ namespace ConstructoraUdcModel.Model
         public Nullable<int> remove_user_id { get; set; }
         public Nullable<int> create_user_id { get; set; }
         public Nullable<int> update_user_id { get; set; }
+        public Nullable<System.DateTime> update_date { get; set; }
     
         public virtual PMT_City PMT_City { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

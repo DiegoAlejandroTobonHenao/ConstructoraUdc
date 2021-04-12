@@ -55,9 +55,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DbModel\CoreModule\CityDbModel.cs" />
+    <Compile Include="DbModel\CoreModule\CountryDbModel.cs" />
+    <Compile Include="DbModel\DbModelBase.cs" />
+    <Compile Include="DbModel\SecurityModule\UserDbModel.cs" />
     <Compile Include="DbModel\SecurityModule\RoleDbModel.cs" />
+    <Compile Include="Implementacion\SecurityModule\UserImpModel.cs" />
     <Compile Include="Implementacion\SecurityModule\RoleImpModel.cs" />
     <Compile Include="Mappers\GeneralMapper.cs" />
+    <Compile Include="Mappers\SecurityModule\UserModelMapper.cs" />
     <Compile Include="Mappers\SecurityModule\RoleModelMapper.cs" />
     <Compile Include="Model\ConstructoraUdcDataModel.Context.cs">
       <AutoGen>True</AutoGen>
