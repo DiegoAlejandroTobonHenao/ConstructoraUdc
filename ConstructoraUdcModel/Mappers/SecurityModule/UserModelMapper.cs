@@ -32,7 +32,9 @@ namespace ConstructoraUdcModel.Mappers.SecurityModule
                 CreateUserId = (int)input.create_user_id,
                 UpdateUserId = (int)input.update_user_id,
                 */
-                Roles = roleMapper.MapperT1T2(roles)
+                Roles = roleMapper.MapperT1T2(roles),
+                Token = input.SEC_Session.Where(x => x.token_status).OrderByDescending(d => d.login_date).Select(x => x.token).FirstOrDefault()
+
             };
         }
 

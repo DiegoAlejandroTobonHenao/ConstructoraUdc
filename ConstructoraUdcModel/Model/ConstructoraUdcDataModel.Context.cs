@@ -13,9 +13,9 @@ namespace ConstructoraUdcModel.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ConstructoraUdcDBEntities : DbContext
+    public partial class RoleImpController : DbContext
     {
-        public ConstructoraUdcDBEntities()
+        public RoleImpController()
             : base("name=ConstructoraUdcDBEntities")
         {
         }

@@ -128,5 +128,14 @@ namespace ConstructoraUdcModel.DbModel.SecurityModule
             set { roles = value; }
         }
 
+        private string token;
+
+        public string Token
+        {
+            get { return token; }
+            set { token = value; }
+        }
+
+
     }
 }

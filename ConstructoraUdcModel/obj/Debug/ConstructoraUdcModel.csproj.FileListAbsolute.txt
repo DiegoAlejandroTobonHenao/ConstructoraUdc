@@ -1,0 +1,14 @@
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdcModel\bin\Debug\ConstructoraUdcModel.dll.config
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdcModel\bin\Debug\ConstructoraUdcModel.dll
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdcModel\bin\Debug\ConstructoraUdcModel.pdb
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdcModel\bin\Debug\EntityFramework.dll
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdcModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdcModel\bin\Debug\log4net.dll
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdcModel\bin\Debug\EntityFramework.xml
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdcModel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdcModel\bin\Debug\log4net.xml
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdcModel\obj\Debug\ConstructoraUdcModel.csprojAssemblyReference.cache
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdcModel\obj\Debug\ConstructoraUdcModel.csproj.CoreCompileInputs.cache
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdcModel\obj\Debug\ConstructoraUdcModel.csproj.CopyComplete
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdcModel\obj\Debug\ConstructoraUdcModel.dll
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdcModel\obj\Debug\ConstructoraUdcModel.pdb

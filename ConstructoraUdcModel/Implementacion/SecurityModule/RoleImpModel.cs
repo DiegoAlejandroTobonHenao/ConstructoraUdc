@@ -21,7 +21,7 @@ namespace ConstructoraUdcModel.Implementacion.SecurityModule
             ///<param name = "DbModel">Representa un objeto con la informacion Rol
             ///</param>
             ///<returns>Entero con la Respuesta: 1. Ok , 2. Ko, 3, Ya existe</returns>
-            using (ConstructoraUdcDBEntities db = new ConstructoraUdcDBEntities() )
+            using (RoleImpController db = new RoleImpController() )
             {
                 try
                 {
@@ -38,7 +38,7 @@ namespace ConstructoraUdcModel.Implementacion.SecurityModule
 
                     return 1;
                 }
-                catch()
+                catch
                 {
                     return 2;
 
@@ -49,7 +49,7 @@ namespace ConstructoraUdcModel.Implementacion.SecurityModule
 
         public int RecordUpdate(RoleDbModel dbModel)
         {
-            using (ConstructoraUdcDBEntities db = new ConstructoraUdcDBEntities())
+            using (RoleImpController db = new RoleImpController())
             {
                 try
                 {
@@ -74,7 +74,7 @@ namespace ConstructoraUdcModel.Implementacion.SecurityModule
 
         public int RecordRemove(RoleDbModel dbModel)
         {
-            using (ConstructoraUdcDBEntities db = new ConstructoraUdcDBEntities())
+            using (RoleImpController db = new RoleImpController())
             {
                 try
                 {
@@ -98,14 +98,14 @@ namespace ConstructoraUdcModel.Implementacion.SecurityModule
 
         public IEnumerable<RoleDbModel> RecordList(string filter)
         { 
-             using (ConstructoraUdcDBEntities db = new ConstructoraUdcDBEntities())
+             using (RoleImpController db = new RoleImpController())
               {
                     var listaLinq = from role in db.SEC_Role
                                     where !role.removed && role.name.ToUpper().Contains(filter.ToUpper())
                                     select role;
                     RoleModelMapper mapper = new RoleModelMapper();
                     var listaFinal = mapper.MapperT1T2(listaLinq);
-                    return listaFinal;
+                    return listaFinal.ToList();
               }
          }
 

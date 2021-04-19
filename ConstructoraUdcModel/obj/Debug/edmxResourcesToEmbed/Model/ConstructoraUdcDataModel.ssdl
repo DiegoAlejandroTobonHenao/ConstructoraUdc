@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ConstructoraUdcDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="PMT_City">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="code" Type="nvarchar" MaxLength="6" />
+    <Property Name="country_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PMT_Country">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="code" Type="nvarchar" MaxLength="6" />
+  </EntityType>
+  <EntityType Name="SEC_Role">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="removed" Type="bit" Nullable="false" />
+    <Property Name="description" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="SEC_Session">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="login_date" Type="datetime" Nullable="false" />
+    <Property Name="ip_adress" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="token" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="token_status" Type="bit" Nullable="false" />
+    <Property Name="logout_date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SEC_User">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="last_name" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="document" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="password_user" Type="nvarchar" MaxLength="80" Nullable="false" />
+    <Property Name="phone" Type="nvarchar" MaxLength="17" Nullable="false" />
+    <Property Name="city_id" Type="int" Nullable="false" />
+    <Property Name="removed" Type="bit" Nullable="false" />
+    <Property Name="removed_date" Type="datetime" />
+    <Property Name="create_date" Type="datetime" Nullable="false" />
+    <Property Name="remove_user_id" Type="int" />
+    <Property Name="create_user_id" Type="int" />
+  </EntityType>
+  <EntityType Name="SEC_User_Role">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="role_id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="fk_city_id">
+    <End Role="PMT_City" Type="Self.PMT_City" Multiplicity="1" />
+    <End Role="SEC_User" Type="Self.SEC_User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PMT_City">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="SEC_User">
+        <PropertyRef Name="city_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_country_id">
+    <End Role="PMT_Country" Type="Self.PMT_Country" Multiplicity="1" />
+    <End Role="PMT_City" Type="Self.PMT_City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PMT_Country">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="PMT_City">
+        <PropertyRef Name="country_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_role_id">
+    <End Role="SEC_Role" Type="Self.SEC_Role" Multiplicity="1" />
+    <End Role="SEC_User_Role" Type="Self.SEC_User_Role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SEC_Role">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="SEC_User_Role">
+        <PropertyRef Name="role_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_user_id">
+    <End Role="SEC_User" Type="Self.SEC_User" Multiplicity="1" />
+    <End Role="SEC_User_Role" Type="Self.SEC_User_Role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SEC_User">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="SEC_User_Role">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_user_id_2">
+    <End Role="SEC_User" Type="Self.SEC_User" Multiplicity="1" />
+    <End Role="SEC_Session" Type="Self.SEC_Session" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SEC_User">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="SEC_Session">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ConstructoraUdcDBModelStoreContainer">
+    <EntitySet Name="PMT_City" EntityType="Self.PMT_City" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PMT_Country" EntityType="Self.PMT_Country" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SEC_Role" EntityType="Self.SEC_Role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SEC_Session" EntityType="Self.SEC_Session" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SEC_User" EntityType="Self.SEC_User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SEC_User_Role" EntityType="Self.SEC_User_Role" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk_city_id" Association="Self.fk_city_id">
+      <End Role="PMT_City" EntitySet="PMT_City" />
+      <End Role="SEC_User" EntitySet="SEC_User" />
+    </AssociationSet>
+    <AssociationSet Name="fk_country_id" Association="Self.fk_country_id">
+      <End Role="PMT_Country" EntitySet="PMT_Country" />
+      <End Role="PMT_City" EntitySet="PMT_City" />
+    </AssociationSet>
+    <AssociationSet Name="fk_role_id" Association="Self.fk_role_id">
+      <End Role="SEC_Role" EntitySet="SEC_Role" />
+      <End Role="SEC_User_Role" EntitySet="SEC_User_Role" />
+    </AssociationSet>
+    <AssociationSet Name="fk_user_id" Association="Self.fk_user_id">
+      <End Role="SEC_User" EntitySet="SEC_User" />
+      <End Role="SEC_User_Role" EntitySet="SEC_User_Role" />
+    </AssociationSet>
+    <AssociationSet Name="fk_user_id_2" Association="Self.fk_user_id_2">
+      <End Role="SEC_User" EntitySet="SEC_User" />
+      <End Role="SEC_Session" EntitySet="SEC_Session" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

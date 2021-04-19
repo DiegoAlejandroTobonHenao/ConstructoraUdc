@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConstructoraUdcModel.Mappers.SecurityModule
+namespace ConstructoraUdcModel.Mappers
 {
     public abstract class GeneralMapper<T1, T2>
     {

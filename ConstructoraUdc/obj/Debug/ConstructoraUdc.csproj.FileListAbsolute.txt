@@ -28,6 +28,11 @@ C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\bin\roslyn\vbc.rsp
 C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\bin\roslyn\VBCSCompiler.exe
 C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\bin\Antlr3.Runtime.dll
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\bin\ConstructoraUdcController.dll
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\bin\ConstructoraUdcModel.dll
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\bin\EntityFramework.dll
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\bin\EntityFramework.SqlServer.dll
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\bin\log4net.dll
 C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\bin\Newtonsoft.Json.dll
@@ -39,6 +44,12 @@ C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\bin\System.Web.WebPa
 C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\bin\System.Web.WebPages.dll
 C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\bin\System.Web.WebPages.Razor.dll
 C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\bin\WebGrease.dll
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\bin\ConstructoraUdcController.pdb
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\bin\ConstructoraUdcModel.pdb
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\bin\ConstructoraUdcModel.dll.config
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\bin\EntityFramework.xml
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\bin\EntityFramework.SqlServer.xml
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\bin\log4net.xml
 C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\bin\System.Web.Helpers.xml
 C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\bin\System.Web.Mvc.xml
 C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\bin\System.Web.Optimization.xml
@@ -61,5 +72,3 @@ C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\obj\Debug\Constructo
 C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\obj\Debug\ConstructoraUdc.csproj.CopyComplete
 C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\obj\Debug\ConstructoraUdc.dll
 C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\obj\Debug\ConstructoraUdc.pdb
-C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\bin\log4net.dll
-C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdc\bin\log4net.xml

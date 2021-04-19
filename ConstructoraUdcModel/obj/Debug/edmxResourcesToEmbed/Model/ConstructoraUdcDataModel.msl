@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ConstructoraUdcDBModelStoreContainer" CdmEntityContainer="ConstructoraUdcDBEntities">
+    <EntitySetMapping Name="PMT_City">
+      <EntityTypeMapping TypeName="ConstructoraUdcDBModel.PMT_City">
+        <MappingFragment StoreEntitySet="PMT_City">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="country_id" ColumnName="country_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PMT_Country">
+      <EntityTypeMapping TypeName="ConstructoraUdcDBModel.PMT_Country">
+        <MappingFragment StoreEntitySet="PMT_Country">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="code" ColumnName="code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEC_Role">
+      <EntityTypeMapping TypeName="ConstructoraUdcDBModel.SEC_Role">
+        <MappingFragment StoreEntitySet="SEC_Role">
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="removed" ColumnName="removed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEC_Session">
+      <EntityTypeMapping TypeName="ConstructoraUdcDBModel.SEC_Session">
+        <MappingFragment StoreEntitySet="SEC_Session">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="login_date" ColumnName="login_date" />
+          <ScalarProperty Name="ip_adress" ColumnName="ip_adress" />
+          <ScalarProperty Name="token" ColumnName="token" />
+          <ScalarProperty Name="token_status" ColumnName="token_status" />
+          <ScalarProperty Name="logout_date" ColumnName="logout_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEC_User">
+      <EntityTypeMapping TypeName="ConstructoraUdcDBModel.SEC_User">
+        <MappingFragment StoreEntitySet="SEC_User">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="document" ColumnName="document" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password_user" ColumnName="password_user" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="city_id" ColumnName="city_id" />
+          <ScalarProperty Name="removed" ColumnName="removed" />
+          <ScalarProperty Name="removed_date" ColumnName="removed_date" />
+          <ScalarProperty Name="create_date" ColumnName="create_date" />
+          <ScalarProperty Name="remove_user_id" ColumnName="remove_user_id" />
+          <ScalarProperty Name="create_user_id" ColumnName="create_user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEC_User_Role">
+      <EntityTypeMapping TypeName="ConstructoraUdcDBModel.SEC_User_Role">
+        <MappingFragment StoreEntitySet="SEC_User_Role">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="role_id" ColumnName="role_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

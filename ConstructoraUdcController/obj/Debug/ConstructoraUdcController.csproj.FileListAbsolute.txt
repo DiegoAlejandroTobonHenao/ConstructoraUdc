@@ -1,0 +1,12 @@
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdcController\bin\Debug\ConstructoraUdcController.dll
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdcController\bin\Debug\ConstructoraUdcController.pdb
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdcController\bin\Debug\ConstructoraUdcModel.dll
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdcController\bin\Debug\EntityFramework.dll
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdcController\bin\Debug\ConstructoraUdcModel.pdb
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdcController\bin\Debug\ConstructoraUdcModel.dll.config
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdcController\bin\Debug\EntityFramework.xml
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdcController\obj\Debug\ConstructoraUdcController.csprojAssemblyReference.cache
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdcController\obj\Debug\ConstructoraUdcController.csproj.CoreCompileInputs.cache
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdcController\obj\Debug\ConstructoraUdcController.csproj.CopyComplete
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdcController\obj\Debug\ConstructoraUdcController.dll
+C:\Users\diego\source\repos\ConstructoraUdc\ConstructoraUdcController\obj\Debug\ConstructoraUdcController.pdb
